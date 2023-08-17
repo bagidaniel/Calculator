@@ -1,0 +1,24 @@
+.default-btn{
+    -fx-background-color: #696969;
+    -fx-background-radius: 30;
+}
+.number-btn{
+    -fx-background-color: #929292;
+    -fx-background-radius: 30;
+}
+.default-btn:hover{
+    -fx-background-color: #929292;
+}
+.number-btn:hover{
+    -fx-background-color: #696969;
+}
+.equal-btn{
+    -fx-background-color: #66B2FF;
+    -fx-background-radius: 30;
+}
+.equal-btn:hover{
+    -fx-background-color: #579DE4;
+}
+.text-field{
+
+}

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="660.0" prefWidth="550.0" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.calculator.CalcController">
+   <children>
+      <SplitPane dividerPositions="0.22492836676217765" orientation="VERTICAL" prefHeight="600.0" prefWidth="440.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <items>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="553.0">
+               <children>
+                  <TextField fx:id="textField" layoutX="207.0" layoutY="30.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="70.0" prefWidth="548.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0">
+                     <font>
+                        <Font size="35.0" />
+                     </font></TextField>
+                  <TextField fx:id="calculationTextField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="550.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <GridPane alignment="CENTER" hgap="3.0" prefHeight="552.0" prefWidth="443.0" style="-fx-background-color: black;" vgap="3.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Button fx:id="openParen" alignment="CENTER" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onAction="#parenButtonClick" styleClass="default-btn" text="(" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="42.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                        </Button>
+                        <Pane mouseTransparent="true" prefHeight="109.0" prefWidth="107.0" GridPane.columnIndex="2">
+                           <children>
+                              <Label fx:id="openParenIndexLabel" layoutX="65.0" layoutY="73.0" prefHeight="21.0" prefWidth="28.0" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Button fx:id="closeParen" alignment="CENTER" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onAction="#parenButtonClick" styleClass="default-btn" text=")" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="42.0" />
+                           </font>
+                        </Button>
+                        <Button alignment="CENTER" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onAction="#opButtonClick" styleClass="default-btn" text="\%" textAlignment="CENTER" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="42.0" />
+                           </font>
+                        </Button>
+                        <Button alignment="CENTER" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onAction="#opButtonClick" styleClass="default-btn" text="÷" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="42.0" />
+                           </font>
+                        </Button>
+                        <Button alignment="CENTER" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onAction="#numberButtonClick" styleClass="number-btn" text="7" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="42.0" />
+                           </font>
+                        </Button>
+                        <Button alignment="CENTER" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onAction="#numberButtonClick" styleClass="number-btn" text="8" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="42.0" />
+                           </font>
+                        </Button>
+                        <Button alignment="CENTER" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onAction="#numberButtonClick" styleClass="number-btn" text="9" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="42.0" />
+                           </font>
+                        </Button>
+                        <Button alignment="CENTER" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onAction="#opButtonClick" styleClass="default-btn" text="×" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="42.0" />
+                           </font>
+                        </Button>
+                        <Button alignment="CENTER" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onAction="#numberButtonClick" styleClass="number-btn" text="4" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="42.0" />
+                           </font>
+                        </Button>
+                        <Button alignment="CENTER" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onAction="#numberButtonClick" styleClass="number-btn" text="6" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="42.0" />
+                           </font>
+                        </Button>
+                        <Button alignment="CENTER" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onAction="#numberButtonClick" styleClass="number-btn" text="5" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="42.0" />
+                           </font>
+                        </Button>
+                        <Button alignment="CENTER" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onAction="#opButtonClick" styleClass="default-btn" text="-" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="42.0" />
+                           </font>
+                        </Button>
+                        <Button alignment="CENTER" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onAction="#numberButtonClick" styleClass="number-btn" text="1" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="42.0" />
+                           </font>
+                        </Button>
+                        <Button alignment="CENTER" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onAction="#numberButtonClick" styleClass="number-btn" text="2" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="42.0" />
+                           </font>
+                        </Button>
+                        <Button alignment="CENTER" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onAction="#numberButtonClick" styleClass="number-btn" text="3" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="42.0" />
+                           </font>
+                        </Button>
+                        <Button alignment="CENTER" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onAction="#opButtonClick" styleClass="default-btn" text="+" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="42.0" />
+                           </font>
+                        </Button>
+                        <Button alignment="CENTER" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onAction="#clearButtonClick" styleClass="default-btn" text="C" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="42.0" />
+                           </font>
+                        </Button>
+                        <Button alignment="CENTER" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onAction="#numberButtonClick" styleClass="number-btn" text="0" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="42.0" />
+                           </font>
+                        </Button>
+                        <Button alignment="CENTER" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" styleClass="default-btn" text="," textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="42.0" />
+                           </font>
+                        </Button>
+                        <Button alignment="CENTER" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onAction="#getResult" styleClass="equal-btn" text="=" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="42.0" />
+                           </font>
+                        </Button>
+                        <Button alignment="CENTER" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onAction="#factorialButtonClick" styleClass="default-btn" text="n!" textAlignment="CENTER" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="42.0" />
+                           </font>
+                        </Button>
+                        <Button alignment="CENTER" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onAction="#opButtonClick" styleClass="default-btn" text="^" textAlignment="CENTER" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="42.0" />
+                           </font>
+                        </Button>
+                        <Button alignment="CENTER" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onAction="#negateButtonClick" styleClass="default-btn" text="+/-" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="35.0" />
+                           </font>
+                        </Button>
+                        <Button alignment="CENTER" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onAction="#sqrtButtonClick" styleClass="default-btn" text="sqrt" textAlignment="CENTER" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Button>
+                        <Button alignment="CENTER" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onAction="#deleteButtonClick" styleClass="default-btn" text="B" textAlignment="CENTER" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="42.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
